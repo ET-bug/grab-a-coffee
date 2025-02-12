@@ -1,5 +1,6 @@
 import '../index.css';
-import MapDisplay from '../components/Map.jsx';
+//import '../components/map/homemap.css';
+import MapDisplay from '../components/map/Map.jsx';
 import { Link } from 'react-router-dom';
 
 function NeighbourhoodButton({text}) {
@@ -21,8 +22,10 @@ function HomePage() {
                     plugs and wifi for working or simply just the best coffee in town, find it here.</h2>
             </div>
         
-            <div id="map">
-                { MapDisplay(london,londonZoom) }          
+
+            <div id="homemap">
+                <MapDisplay mapTarget='homemap' centerCoords={london} zoom={londonZoom} markerTarget='marker' markerCoords={london}/>         
+                <div id='marker'></div>
             </div>
           
             <div className="neighbourhood">

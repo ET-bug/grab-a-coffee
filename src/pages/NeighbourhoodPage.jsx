@@ -1,6 +1,7 @@
 import '../index.css';
-import MapDisplay from '../components/Map.jsx'
+import MapDisplay from '../components/map/Map.jsx'
 import { useParams } from 'react-router-dom';
+import CafeCard from '../components/CafeCard.jsx';
 
 
 function NeighbourhoodPage() {
@@ -70,11 +71,14 @@ function NeighbourhoodPage() {
                 <h2>{currentNeighbhourhood.description}</h2>
             </div>
 
-            
-            <div id="map">
-                { MapDisplay(currentNeighbhourhood.center,neighbourhoodZoom) }          
+            <div className="main">
+                <div id="neighbourhoodmap">
+                    <MapDisplay mapTarget='neighbourhoodmap' centerCoords={currentNeighbhourhood.center} zoom={neighbourhoodZoom} markerTarget='marker' markerCoords={currentNeighbhourhood.center}/>
+                    {/*hidden marker element*/}
+                    <div id="marker" style={{display:'none'}}></div>
+                </div>
+                <CafeCard />
             </div>
-            
         
         </>
     );

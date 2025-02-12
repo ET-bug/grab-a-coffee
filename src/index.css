@@ -1,3 +1,6 @@
+@import "node_modules/ol/ol.css";
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -37,12 +40,6 @@ h2 {
   gap: 40px;
 }
 
-.map {
-  margin: auto;
-  width: 80vw;
-  border-radius: 20px;
-}
-
 .neighbourhood {
   margin: auto;
   margin-top: 40px;
@@ -61,3 +58,37 @@ h2 {
   font-size: 20px;
   font-weight: 600;
 }
+
+#homemap {
+    margin: auto;
+    height: 400px;
+    width: 80vw;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#neighbourhoodmap {
+  margin-right: auto;
+  height: 400px;
+  width: 37vw;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#marker {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+}
+
+.main {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+}
+
+.cafecard {
+  width: 37vw;
+  margin-left: auto;
+}
+
