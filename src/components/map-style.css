@@ -1,0 +1,9 @@
+@import "node_modules/ol/ol.css";
+
+#map {
+    margin: auto;
+    height: 400px;
+    width: 80vw;
+    border-radius: 20px;
+    overflow:hidden;
+}

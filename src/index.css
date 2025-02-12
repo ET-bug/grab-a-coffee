@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  margin: auto;
 
   color: black;
   background-color: #FAEFE9;
@@ -12,7 +13,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  outline: 2px solid red;
+}
+
 h1 {
   color: black;
   font-size: 50px;
+  width: 35%;
+}
+
+h2 {
+  font-size: 30px;
+  margin-left: auto;
+  width: 60%;
+}
+
+.header {
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.map {
+  margin: auto;
+  width: 80vw;
+  border-radius: 20px;
+}
+
+.neighbourhood {
+  margin: auto;
+  margin-top: 40px;
+  width: 80vw;
+  display: grid;
+  grid-template: 5vw 5vw 5vw / 23% 23% 23% 23%;
+  grid-auto-columns: 23%;
+  grid-auto-rows: 5vw;
+  justify-content: space-between;
+  align-content: 10px;
+  gap: 25px;
+}
+
+.neighbourhood__button {
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
 }
