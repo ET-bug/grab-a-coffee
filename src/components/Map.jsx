@@ -14,7 +14,7 @@ import './map-style.css';
 
 
 
-function MapDisplay(neighbourhoodLonLat) {
+function MapDisplay(neighbourhoodLonLat,zoom) {
     useEffect(() => {
         
         const newCenter = fromLonLat(neighbourhoodLonLat);
@@ -28,7 +28,7 @@ function MapDisplay(neighbourhoodLonLat) {
             ],
             view: new View({
                 center: newCenter,
-                zoom: 12,
+                zoom: zoom,
             }),
         });
 

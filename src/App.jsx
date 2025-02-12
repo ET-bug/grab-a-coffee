@@ -8,7 +8,7 @@ const routes = [
     element: <HomePage />,
   },
   {
-    path: '/neighbourhood-page',
+    path: 'neighbourhood/:name',
     element: <NeighbourhoodPage />,
   },
 ];

@@ -2,21 +2,16 @@ import '../index.css';
 import MapDisplay from '../components/Map.jsx';
 import { Link } from 'react-router-dom';
 
-function NeighbourhoodButton({text,handleClick}) {
+function NeighbourhoodButton({text}) {
     return (
-    <button className="neighbourhood__button" onClick={handleClick}>{text}</button>
+        <Link className="neighbourhood__button" to={`/neighbourhood/${text}`}>{text}</Link>
     );
 }
-
-function buttonClick() {
-
-}
-
-
 
 function HomePage() {
     const neighbourhoods = ["Chelsea","Kensington","Marylebone","Mayfair","Notting Hill","Clerkenwell","City of London","Liverpool Street","Holborn","Soho","Bloomsbury","Covent Garden"];
     const london = [-0.11302, 51.51862];
+    const londonZoom = 12;
     
     return (
         <>
@@ -27,22 +22,16 @@ function HomePage() {
             </div>
         
             <div id="map">
-                { MapDisplay(london) }          
+                { MapDisplay(london,londonZoom) }          
             </div>
           
             <div className="neighbourhood">
                 {neighbourhoods.map((item) => (
-                    <NeighbourhoodButton key={item} text={item} handleClick={()=>buttonClick} />
+                    <NeighbourhoodButton key={item} text={item} />
                     ))}
             </div>
-        
-    
-        
         </>
     );
-
-
-
 }
 
 export default HomePage;
